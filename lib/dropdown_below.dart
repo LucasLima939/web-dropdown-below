@@ -85,7 +85,6 @@ class _DropdownScrollBehavior extends ScrollBehavior {
   @override
   TargetPlatform getPlatform(BuildContext context) => Theme.of(context).platform;
 
-  @override
   Widget buildViewportChrome(BuildContext context, Widget child, AxisDirection axisDirection) => child;
 
   @override
@@ -476,12 +475,12 @@ class _DropdownBelowState<T> extends State<DropdownBelow<T>> with WidgetsBinding
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addObserver(this);
+    WidgetsBinding.instance.addObserver(this);
   }
 
   @override
   void dispose() {
-    WidgetsBinding.instance!.removeObserver(this);
+    WidgetsBinding.instance.removeObserver(this);
     _removeDropdownRoute();
     super.dispose();
   }
